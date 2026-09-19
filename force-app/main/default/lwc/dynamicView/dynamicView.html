@@ -1,0 +1,13 @@
+<template>
+    <template lwc:if={error}>
+        <c-error-view
+            error={error}
+            info={stack}>
+        </c-error-view>
+    </template>
+
+    <template lwc:else>
+        <c-health-view></c-health-view>
+    </template>
+
+</template>

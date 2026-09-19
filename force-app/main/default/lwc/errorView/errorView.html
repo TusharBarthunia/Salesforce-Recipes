@@ -1,0 +1,21 @@
+<template>
+
+    <lightning-card title="Error View">
+
+        <div class="slds-p-around_medium">
+
+            <p>
+                ❌ An error occurred in Healthy View.
+            </p>
+
+            <template lwc:if={error}>
+                <p class="slds-m-top_small">
+                    Error: {error.message}
+                </p>
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>
