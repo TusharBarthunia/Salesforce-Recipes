@@ -1,0 +1,59 @@
+<template>
+    <lightning-card
+        title="Lightning Module Import Demo"
+        icon-name="utility:apps">
+
+        <div class="slds-p-around_medium">
+
+            <p class="description">
+                Demonstrates UI components available through Lightning
+                module imports.
+            </p>
+
+            <div class="button-container">
+
+                <lightning-button
+                    label="Show Alert"
+                    onclick={handleAlert}>
+                </lightning-button>
+
+                <lightning-button
+                    label="Show Confirm"
+                    onclick={handleConfirm}>
+                </lightning-button>
+
+                <lightning-button
+                    label="Show Prompt"
+                    onclick={handlePrompt}>
+                </lightning-button>
+
+                <lightning-button
+                    label="Show Toast"
+                    onclick={handleToast}>
+                </lightning-button>
+
+                <lightning-button
+                    label="Show Platform Toast"
+                    onclick={handlePlatformToast}>
+                </lightning-button>
+
+            </div>
+
+            <template lwc:if={promptValue}>
+                <div class="result">
+                    <strong>Prompt Value:</strong>
+                    {promptValue}
+                </div>
+            </template>
+
+            <template lwc:if={confirmResult}>
+                <div class="result">
+                    <strong>Confirm Result:</strong>
+                    {confirmResult}
+                </div>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>
