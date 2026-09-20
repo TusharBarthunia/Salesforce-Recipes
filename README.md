@@ -27,7 +27,7 @@ The component demonstrates how an Error Boundary can catch unhandled errors occu
 
 ---
 
-### 2. Notifications & Toast Messages — LWC
+### 2. NotificationsAndToastMessages — LWC
 
 **Added:** 20 Sep 2026
 
