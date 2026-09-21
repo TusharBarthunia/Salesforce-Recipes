@@ -46,3 +46,24 @@ The component demonstrates:
 - None
 
 ---
+
+### 3. EventPropagation appEvent — LWC
+
+**Added:** 21 Sep 2026
+
+Demonstrates **Custom Event Propagation in Lightning Web Components (LWC)** using the `CustomEvent` interface and its `bubbles` and `composed` properties.
+
+The component demonstrates:
+
+- Creating and dispatching custom events using `CustomEvent`
+- Event propagation through the LWC component hierarchy
+- `bubbles` property to control whether an event propagates from the event target to its ancestors
+- `composed` property to control whether an event can cross the component's shadow boundary
+- Handling custom events in parent components
+- Understanding event propagation across nested LWC components
+
+**Related Components:**
+
+- `appEvent` — LWC
+- `parentEvent` — LWC
+- `childEvent` — LWC

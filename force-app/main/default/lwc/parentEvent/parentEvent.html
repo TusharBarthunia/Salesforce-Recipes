@@ -1,0 +1,10 @@
+<!-- parent.html -->
+<template>
+  <h3>I'm a parent component</h3>
+  <div 
+    class='wrapper' 
+    oncustomevent={handleButtonClickDiv}>
+    <c-child-event 
+      oncustomevent={handleButtonClickChild}></c-child-event>
+  </div>
+</template>
