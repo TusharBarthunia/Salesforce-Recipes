@@ -67,3 +67,19 @@ The component demonstrates:
 - `appEvent` — LWC
 - `parentEvent` — LWC
 - `childEvent` — LWC
+
+---
+
+### 4. lmsPublisher — LWC
+
+**Added:** 22 Sep 2026
+
+Demonstrates the use of **Lightning Message Service (LMS)** for communication between independent Lightning Web Components.
+
+Here, we published a message from the publisher component and then used LMS to send that message through the `LmsDemo` message channel so the subscriber could receive and display it.
+
+**Related Components:**
+
+- `lmsPublisher` — LWC
+- `lmsSubscriber` — LWC
+- `LmsDemo` — Message Channel
