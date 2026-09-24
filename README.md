@@ -83,3 +83,15 @@ Here, we published a message from the publisher component and then used LMS to s
 - `lmsPublisher` — LWC
 - `lmsSubscriber` — LWC
 - `LmsDemo` — Message Channel
+
+---
+
+### 5. LDS Cache — LWC
+
+**Added:** 24 Sep 2026
+
+Demonstrates how **Lightning Data Service (LDS)** manages record data through its shared cache.
+
+Here, one component is used to view a record and another is used to edit it. When the record is edited through LDS, the updated data is automatically reflected in the view component. Components using a relevant `@wire` adapter receive the new value when LDS detects a record change, so no manual refresh is required.
+
+This demonstrates the difference between LDS-managed data and data returned from Apex, which must be refreshed manually.
