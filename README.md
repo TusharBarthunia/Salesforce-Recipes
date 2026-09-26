@@ -99,3 +99,19 @@ This demonstrates the difference between LDS-managed data and data returned from
 **Related Components:**
 
 - `ldsAccountViewer` — LWC
+- `ldsAccountEditor` — LWC
+
+---
+
+### 6. Custom Data Types in Lightning Datatable myDatatable — LWC
+
+**Added:** 26 Sep 2026
+
+Demonstrates how to create custom data types in `lightning-datatable` by extending `LightningDatatable` and defining custom cell templates.
+
+The component uses `typeAttributes` to pass row data into custom cells and `cellAttributes` to customize cell styling and layout. Account records are retrieved from Apex and displayed with custom name and number columns.
+
+**Related Components:**
+
+- `myCustomTypeDatatable` — LWC
+- `AccountControllerDatatable` — Apex Class
