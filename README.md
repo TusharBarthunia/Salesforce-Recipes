@@ -70,7 +70,7 @@ The component demonstrates:
 
 ---
 
-### 4. lmsPublisher — LWC
+### 4. Lightning Message Service (LMS) lmsPublisher — LWC
 
 **Added:** 22 Sep 2026
 
@@ -115,3 +115,17 @@ The component uses `typeAttributes` to pass row data into custom cells and `cell
 
 - `myCustomTypeDatatable` — LWC
 - `AccountControllerDatatable` — Apex Class
+
+---
+
+### 7. Wire an Apex Method with Complex Parameters — LWC
+
+**Added:** 27 Sep 2026
+
+Demonstrates how to pass complex parameters to an Apex method using `@wire`. The component builds a reactive object matching the Apex `CustomWrapper` class, containing a string, an integer, and a list, and updates the response when the input values change.
+
+**Related Components:**
+
+- `apexWireMethodWithComplexParams` — LWC
+- `ApexTypesController` — Apex Class
+- `CustomWrapper` — Apex Class
