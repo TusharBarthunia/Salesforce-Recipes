@@ -1,0 +1,65 @@
+<template>
+
+    <lightning-card title="Apex Continuation Demo">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-button
+                label="Call External API"
+                variant="brand"
+                onclick={handleCallout}
+                disabled={isLoading}>
+            </lightning-button>
+
+
+            <template lwc:if={isLoading}>
+
+                <div class="slds-m-top_medium">
+
+                    <lightning-spinner
+                        alternative-text="Calling external API">
+                    </lightning-spinner>
+
+                    <p class="slds-m-top_medium">
+                        Waiting for external API response...
+                    </p>
+
+                </div>
+
+            </template>
+
+
+            <template lwc:if={response}>
+
+                <div class="slds-m-top_medium">
+
+                    <p>
+                        <strong>API Response:</strong>
+                    </p>
+
+                    <pre>{response}</pre>
+
+                </div>
+
+            </template>
+
+
+            <template lwc:if={error}>
+
+                <div class="slds-m-top_medium">
+
+                    <p>
+                        <strong>Error:</strong>
+                    </p>
+
+                    <p>{error}</p>
+
+                </div>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>

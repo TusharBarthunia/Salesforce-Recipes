@@ -129,3 +129,16 @@ Demonstrates how to pass complex parameters to an Apex method using `@wire`. The
 - `apexWireMethodWithComplexParams` — LWC
 - `ApexTypesController` — Apex Class
 - `CustomWrapper` — Apex Class
+
+---
+
+### 8. Apex Continuation Callout — LWC
+
+**Added:** 29 Sep 2026
+
+Demonstrates how to use an **Apex Continuation** to make a long-running HTTP callout without holding the browser request open. The Apex controller starts the callout and processes the response in a callback, while the LWC invokes the method and displays loading, response, and error states.
+
+**Related Components:**
+
+- `continuationDemo` — LWC
+- `ContinuationDemoController` — Apex Class
