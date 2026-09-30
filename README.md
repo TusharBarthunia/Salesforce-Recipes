@@ -142,3 +142,19 @@ Demonstrates how to use an **Apex Continuation** to make a long-running HTTP cal
 
 - `continuationDemo` — LWC
 - `ContinuationDemoController` — Apex Class
+
+---
+
+### 9. Metadata-Driven Integration Framework — Apex
+
+**Added:** 1 Oct 2026
+
+Introduces a metadata-driven API integration framework pattern that centralizes integration configuration and is designed to support runtime placeholder resolution. This approach can reduce hardcoded payloads and enable new integrations to be onboarded through configuration with minimal code changes. The multipart form builder supports constructing request bodies for file uploads.
+
+Runtime placeholder resolution and several configuration-application paths in `HTTPCalloutService` are currently commented out.
+
+**Related Components:**
+
+- `HTTPCalloutService` — Apex Class
+- `HttpCalloutMultipartFormBuilder` — Apex Class
+- `CustomMetadataTypeSelector` — Apex Class
