@@ -7,6 +7,7 @@ export default class ContinuationDemo extends LightningElement {
     response;
     error;
     isLoading = false;
+    greeting;
 
 
     handleCallout() {
@@ -47,5 +48,15 @@ export default class ContinuationDemo extends LightningElement {
                 this.isLoading = false;
 
             });
+    }
+
+    handleThrowError(event) {
+        // Synchronous code with error
+        this.greeting = event.targets.value; // targets is an intentional typo that throws an error
+
+        // Asynchronous code with error
+        Promise.resolve().then(() => {
+            this.greeting = event.targets.value; // targets is an intentional typo that throws an error
+        });
     }
 }
