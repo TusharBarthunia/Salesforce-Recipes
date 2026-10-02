@@ -158,3 +158,28 @@ Runtime placeholder resolution and several configuration-application paths in `H
 - `HTTPCalloutService` — Apex Class
 - `HttpCalloutMultipartFormBuilder` — Apex Class
 - `CustomMetadataTypeSelector` — Apex Class
+
+---
+
+### 10. Dynamic Interactions — LWC
+
+**Added:** 2 Oct 2026
+
+Demonstrates **Dynamic Interactions in Lightning App Builder** for communication between independent Lightning Web Components.
+
+The component demonstrates:
+
+- Defining a custom event in the LWC metadata configuration
+- Dispatching a `CustomEvent` from a source component
+- Passing selected Account details through event `detail`
+- Configuring Dynamic Interactions in Lightning App Builder
+- Passing event data from a source component to target components
+- Updating target components dynamically based on the selected Account
+- Using `@api` properties in target components to receive interaction data
+
+**Related Components:**
+
+- `dynamicinteractionAccountList` — LWC
+- `dynamicinteractionAccountDetail` — LWC
+
+---
