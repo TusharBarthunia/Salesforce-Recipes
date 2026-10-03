@@ -183,3 +183,27 @@ The component demonstrates:
 - `dynamicinteractionAccountDetail` — LWC
 
 ---
+
+### 11. Reactivity Flow Demo — Flow & LWC
+
+**Added:** 3 Oct 2026
+
+Demonstrates **reactivity and data communication between Flow Screen and Lightning Web Components (LWC)**.
+
+The Flow demonstrates communication in both directions:
+
+- **Flow → LWC:** Passing reactive data from Flow to the `colorName` LWC using a public `@api` property exposed through the component's metadata XML.
+- **LWC → Flow:** Sending data from the `LwcToFlow` component back to the Flow using the `lightning/flowSupport` module and an `@api` setter.
+- Demonstrates how Flow and LWC components can exchange data dynamically during a Screen Flow.
+- Demonstrates using public properties to make LWC components configurable and reactive within Flow.
+
+**Flow:**
+
+- `Reactivity Flow Demo` — Screen Flow
+
+**Related Components:**
+
+- `colorName` — LWC
+- `LwcToFlow` — LWC
+
+---
