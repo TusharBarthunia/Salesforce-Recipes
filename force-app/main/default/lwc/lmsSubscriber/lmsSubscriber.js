@@ -27,4 +27,16 @@ export default class LmsSubscriber extends LightningElement {
             this.subscription = null;
         }
     }
+
+    handleSubscribe() {
+        if (this.messageContext) {
+            this.subscription = subscribe(
+                this.messageContext,
+                LMS_DEMO,
+                (payload) => {
+                    this.message = payload.message;
+                }
+            );
+        }
+    }
 }

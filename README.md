@@ -207,3 +207,23 @@ The Flow demonstrates communication in both directions:
 - `LwcToFlow` — LWC
 
 ---
+
+### 12. Trigger Handler Framework — Apex
+
+**Added:** 6 Oct 2026
+
+Demonstrates a logicless trigger pattern using a shared `TriggerHandler` base class. A handler extends the base class and calls `run()` from its trigger; the framework dispatches execution to the matching trigger-context method.
+
+The framework supports:
+
+- Context-specific methods for before and after insert, update, and delete, plus after undelete
+- Configurable maximum loop counts to help prevent recursive trigger execution
+- Bypassing one or more handlers during a transaction, with methods to check or clear bypasses
+
+Based on the [SFDC Trigger Framework](https://github.com/kevinohara80/sfdc-trigger-framework).
+
+**Related Components:**
+
+- `TriggerHandler` — Apex Class
+
+---
