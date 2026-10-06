@@ -220,7 +220,7 @@ The framework supports:
 - Configurable maximum loop counts to help prevent recursive trigger execution
 - Bypassing one or more handlers during a transaction, with methods to check or clear bypasses
 
-Based on the [SFDC Trigger Framework](https://github.com/kevinohara80/sfdc-trigger-framework).
+Reference - (https://github.com/kevinohara80/sfdc-trigger-framework).
 
 **Related Components:**
 
