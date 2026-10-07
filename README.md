@@ -227,3 +227,18 @@ Reference - (https://github.com/kevinohara80/sfdc-trigger-framework).
 - `TriggerHandler` — Apex Class
 
 ---
+
+### 13. Adding SOSL Queries to Unit Tests — Apex
+
+**Added:** 7 Oct 2026
+
+Demonstrates how to write predictable Apex tests for **Salesforce Object Search Language (SOSL)** queries. SOSL queries return no search results by default during test execution. Use `Test.setFixedSearchResults()` to specify record IDs for subsequent SOSL queries in the test method; calling it again replaces the fixed result set, and passing an empty list results in no matches.
+
+The fixed record IDs are supplied to the SOSL `RETURNING` clause in place of normal search results. Any `WHERE` and `LIMIT` clauses in that clause are still applied to the fixed results. For example, a test can provide both matching and non-matching Accounts and verify that a `WHERE` filter returns only the matching Account. Tests can also set different fixed result lists between SOSL queries or include IDs from multiple objects.
+
+**Related Components:**
+
+- `SoslSearchDemo` — Apex Class
+- `SoslSearchDemoTest` — Apex Test Class
+
+---
