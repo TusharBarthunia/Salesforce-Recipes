@@ -267,3 +267,24 @@ The component demonstrates:
 - `formFactorDemo` — LWC
 
 ---
+
+### 14. SeeAllData in Apex Tests — Apex
+
+**Added:** 8 Oct 2026
+
+Demonstrates the use of `@IsTest(SeeAllData=true)` in Apex unit tests and how test methods can access existing records from the Salesforce org.
+
+The test demonstrates:
+
+- Using `SeeAllData=true` to access existing org data in a test method
+- Creating additional test data within the test transaction
+- Querying existing and newly created records
+- Performing DML operations on records accessed through `SeeAllData`
+- Understanding that changes made during a test are rolled back after the test execution
+- Understanding the difference between data available during test execution and the final state of the org
+
+**Related Components:**
+
+- `SeeAllDataExample` — Apex Test Class
+
+---
