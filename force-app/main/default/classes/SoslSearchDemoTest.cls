@@ -72,6 +72,7 @@ private with sharing class SoslSearchDemoTest {
 
         Test.stopTest();
         System.debug('Test Method 1 '+searchResults.size());
+        System.debug('Test Method 1.1 '+searchResults[0].size());
         System.assertEquals(
             0,
             searchResults[0].size(),

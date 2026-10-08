@@ -242,3 +242,28 @@ The fixed record IDs are supplied to the SOSL `RETURNING` clause in place of nor
 - `SoslSearchDemoTest` — Apex Test Class
 
 ---
+
+### 13. LWC Form Factors — FormFactorDemo
+
+**Added:** 8 Oct 2026
+
+Demonstrates how to configure Lightning Web Components for different device form factors using `supportedFormFactors` in the component metadata configuration file.
+
+The component demonstrates:
+
+- Configuring LWC for Desktop (`Large`) and Mobile (`Small`) form factors
+- Defining different form-factor support for different Lightning page types
+- Configuring an App Page to support Mobile only
+- Configuring a Record Page to support Desktop only
+- Understanding the difference between page targets and supported form factors
+
+**Configuration:**
+
+- App Page → `Small` (Mobile)
+- Record Page → `Large` (Desktop)
+
+**Related Components:**
+
+- `formFactorDemo` — LWC
+
+---
