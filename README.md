@@ -288,3 +288,28 @@ The test demonstrates:
 - `SeeAllDataExample` — Apex Test Class
 
 ---
+
+### 15. Responsive Layout — LWC
+
+**Added:** 10 Oct 2026
+
+Demonstrates how to create responsive layouts in Lightning Web Components using `lightning-layout` and `lightning-layout-item`.
+
+The component demonstrates:
+
+- Creating responsive layouts using the Salesforce Lightning Grid
+- Using `size` to define the layout for larger devices
+- Using `small-device-size` for mobile devices
+- Displaying content in one column on mobile devices
+- Displaying content in two columns on tablets and desktops
+
+**Responsive Configuration:**
+
+- Mobile → `small-device-size="6"` → 1 column
+- Tablet/Desktop → `size="12"` → 2 columns
+
+**Related Components:**
+
+- `responsiveLayoutDemo` — LWC
+
+---
