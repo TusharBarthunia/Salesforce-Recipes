@@ -312,4 +312,26 @@ The component demonstrates:
 
 - `responsiveLayoutDemo` — LWC
 
+### 16. Apex HTTP Callout with Unit Test Mock after DML — Apex
+
+**Added:** 12 Oct 2026
+
+Demonstrates how to perform an HTTP callout using and how to test the callout using `HttpCalloutMock` after the DML using Test.startTest() and Test.stopTest().
+
+The test demonstrates:
+- Creating and inserting an Account before initiating the callout
+- Using `Test.startTest()` and `Test.stopTest()` to execute asynchronous Apex
+- Using `Test.setMock()` to register a mock HTTP response
+- Implementing `HttpCalloutMock` to simulate an external API response
+- Verifying the HTTP method and endpoint inside the mock
+- Returning a mock JSON response without making an actual external callout
+- Verifying that the mock can also be registered after `Test.startTest()` and still successfully intercept the callout
+
+**Endpoint:**
+`https://jsonplaceholder.typicode.com/todos/1`
+
+**Related Components:**
+- `TodoCalloutService` — Apex Class
+- `TodoCalloutServiceTest` — Apex Test Class
+
 ---
