@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Time__c</fullName>
+    <label>Start Time</label>
+    <description>The time of day this experience session begins, used for scheduling and guest notifications.</description>
+    <inlineHelpText>Enter the time this session starts (e.g., 9:00 AM).</inlineHelpText>
+    <type>Time</type>
+</CustomField>

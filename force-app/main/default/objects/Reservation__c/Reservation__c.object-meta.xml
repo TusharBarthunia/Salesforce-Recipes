@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Reservation</label>
+    <pluralLabel>Reservations</pluralLabel>
+    <nameField>
+        <label>Reservation Number</label>
+        <type>AutoNumber</type>
+        <displayFormat>RES-{00000}</displayFormat>
+        <startingNumber>1</startingNumber>
+    </nameField>
+    <sharingModel>ReadWrite</sharingModel>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <visibility>Public</visibility>
+    <description>The Reservation object tracks hotel stay records for resort guests. It captures Check-In Date, Check-Out Date, Room Number, and Status (Booked, Checked In, Checked Out, or Cancelled). An AI-generated Welcome Email Draft is stored for guest communication. Commonly used for front-desk check-in flows.</description>
+    <enableSearch>true</enableSearch>
+    <enableReports>true</enableReports>
+    <enableActivities>true</enableActivities>
+    <enableHistory>true</enableHistory>
+</CustomObject>

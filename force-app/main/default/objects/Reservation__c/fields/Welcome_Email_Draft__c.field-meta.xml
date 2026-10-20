@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Welcome_Email_Draft__c</fullName>
+    <label>Welcome Email Draft</label>
+    <description>Stores the AI-generated personalized welcome email draft for this reservation, ready for staff review and sending.</description>
+    <inlineHelpText>This field is populated automatically by AI. Review and edit before sending to the guest.</inlineHelpText>
+    <type>LongTextArea</type>
+    <length>32768</length>
+    <visibleLines>10</visibleLines>
+</CustomField>

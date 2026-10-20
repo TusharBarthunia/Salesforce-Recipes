@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price__c</fullName>
+    <label>Price</label>
+    <description>The per-guest price for booking this experience, displayed in the activity catalog.</description>
+    <inlineHelpText>Enter the price per guest in the org's default currency.</inlineHelpText>
+    <type>Currency</type>
+    <precision>18</precision>
+    <scale>2</scale>
+</CustomField>

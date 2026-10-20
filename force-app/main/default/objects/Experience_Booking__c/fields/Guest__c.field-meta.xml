@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guest__c</fullName>
+    <label>Guest</label>
+    <description>The guest who made this booking; also controls record ownership via master-detail.</description>
+    <inlineHelpText>Select the guest associated with this booking.</inlineHelpText>
+    <type>MasterDetail</type>
+    <referenceTo>Guest__c</referenceTo>
+    <relationshipLabel>Experience Bookings</relationshipLabel>
+    <relationshipName>Experience_Bookings</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

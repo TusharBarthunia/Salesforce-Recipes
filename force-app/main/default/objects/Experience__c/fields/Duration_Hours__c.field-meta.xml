@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_Hours__c</fullName>
+    <label>Duration Hours</label>
+    <description>The duration of this experience in hours, used for scheduling and guest planning.</description>
+    <inlineHelpText>Enter the duration in hours with up to 2 decimal places (e.g., 1.5 for 90 minutes).</inlineHelpText>
+    <type>Number</type>
+    <precision>18</precision>
+    <scale>2</scale>
+</CustomField>

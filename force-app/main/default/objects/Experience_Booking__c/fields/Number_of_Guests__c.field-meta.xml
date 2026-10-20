@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Guests__c</fullName>
+    <label>Number of Guests</label>
+    <description>The total number of guests included in this booking, used for capacity management.</description>
+    <inlineHelpText>Enter the total number of guests attending (whole number).</inlineHelpText>
+    <type>Number</type>
+    <precision>18</precision>
+    <scale>0</scale>
+</CustomField>

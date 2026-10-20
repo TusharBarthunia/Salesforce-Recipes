@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Name__c</fullName>
+    <label>Preferred Name</label>
+    <description>The name the guest prefers to be called, used for personalized service and communications.</description>
+    <inlineHelpText>Enter the guest's preferred first name or nickname (e.g., Jamie).</inlineHelpText>
+    <type>Text</type>
+    <length>255</length>
+</CustomField>

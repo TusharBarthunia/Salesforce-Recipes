@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Experience__c</fullName>
+    <label>Experience</label>
+    <description>The resort experience this session is a scheduled slot for.</description>
+    <inlineHelpText>Select the experience this session belongs to.</inlineHelpText>
+    <type>Lookup</type>
+    <referenceTo>Experience__c</referenceTo>
+    <relationshipLabel>Experience Sessions</relationshipLabel>
+    <relationshipName>Experience_Sessions</relationshipName>
+    <deleteConstraint>SetNull</deleteConstraint>
+</CustomField>

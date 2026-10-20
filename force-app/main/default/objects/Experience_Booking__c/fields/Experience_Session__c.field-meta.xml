@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Experience_Session__c</fullName>
+    <label>Experience Session</label>
+    <description>The scheduled session this booking is for; also controls record ownership via master-detail.</description>
+    <inlineHelpText>Select the session the guest is booked into.</inlineHelpText>
+    <type>MasterDetail</type>
+    <referenceTo>Experience_Session__c</referenceTo>
+    <relationshipLabel>Experience Bookings</relationshipLabel>
+    <relationshipName>Session_Bookings</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

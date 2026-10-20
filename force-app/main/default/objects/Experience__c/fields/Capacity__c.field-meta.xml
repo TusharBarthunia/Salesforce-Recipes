@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capacity__c</fullName>
+    <label>Capacity</label>
+    <description>The maximum number of guests that can participate in a single session of this experience.</description>
+    <inlineHelpText>Enter the maximum number of guests per session (whole number).</inlineHelpText>
+    <type>Number</type>
+    <precision>18</precision>
+    <scale>0</scale>
+</CustomField>

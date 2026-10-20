@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Canceled__c</fullName>
+    <label>Is Canceled</label>
+    <description>Indicates whether this booking has been canceled by the guest or resort staff.</description>
+    <inlineHelpText>Check this box if the booking has been canceled.</inlineHelpText>
+    <type>Checkbox</type>
+    <defaultValue>false</defaultValue>
+</CustomField>
