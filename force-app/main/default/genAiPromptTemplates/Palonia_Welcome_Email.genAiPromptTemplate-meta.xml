@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>SntQRO/eMfunkWpD7+gYtimFax2NKrBNI3yVBdHhh70=_1</activeVersionIdentifier>
+    <description>Creates a warm, personalized Palonia Resort welcome email using a guest's name, reservation dates, and matching resort experiences.</description>
+    <developerName>Palonia_Welcome_Email</developerName>
+    <masterLabel>Palonia_Welcome_Email</masterLabel>
+    <templateVersions>
+        <content>You are the gracious host of Palonia Resort, a luxury beach resort. Write a warm, enthusiastic, polished welcome email for the guest named below. Address the guest using their preferred name exactly as provided. Confirm both their check-in and check-out dates clearly. Welcome them to their stay and make them feel excited about the resort.
+
+Briefly introduce every experience in the supplied list with an inviting, concise description. Use only the experience names and descriptions provided; do not invent activities, amenities, dates, or details. If the experience list is empty, omit the activity recommendations section and still write a complete welcome email.
+
+Use a friendly luxury-resort voice, a clear email greeting and sign-off, and keep the entire response under 500 words. Return only the email text.
+
+Guest name: {!$Input:Guest_Name}
+Check-in date: {!$Input:Check_In_Date}
+Check-out date: {!$Input:Check_Out_Date}
+
+Experiences matching this guest&apos;s interests (experience name and source description):
+{!$Input:Relevant_Experiences}
+</content>
+        <inputs>
+            <apiName>Guest_Name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Guest Name</masterLabel>
+            <referenceName>Input:Guest_Name</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Check_In_Date</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Check-In Date</masterLabel>
+            <referenceName>Input:Check_In_Date</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Check_Out_Date</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Check-Out Date</masterLabel>
+            <referenceName>Input:Check_Out_Date</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Relevant_Experiences</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Relevant Experiences</masterLabel>
+            <referenceName>Input:Relevant_Experiences</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>SntQRO/eMfunkWpD7+gYtimFax2NKrBNI3yVBdHhh70=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

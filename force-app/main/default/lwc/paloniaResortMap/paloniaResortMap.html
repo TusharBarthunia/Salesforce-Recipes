@@ -1,0 +1,156 @@
+<template>
+    <lightning-card title="Palonia Resort Map" icon-name="utility:map">
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading resort map" size="medium"></lightning-spinner>
+            </template>
+
+            <template lwc:elseif={errorMessage}>
+                <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                    <span>{errorMessage}</span>
+                </div>
+            </template>
+
+            <template lwc:elseif={mapData}>
+                <p class="map-intro slds-m-bottom_small">
+                    Explore resort activities. Gold-ringed pins match this guest's interests.
+                </p>
+
+                <div class="map-layout">
+                    <div class="map-frame" role="region" aria-label="Interactive map of Palonia Resort">
+                        <svg
+                            class="resort-map"
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="xMidYMid meet"
+                            role="group"
+                            aria-label="Resort map. Use Tab to navigate the experience pins."
+                        >
+                            <rect width="100" height="100" fill="#dcebd1"></rect>
+
+                            <path d="M0 0h100v27H0z" fill="#b8d4a8"></path>
+                            <path d="M0 26c18-4 31 3 49 0s33-2 51 1v8H0z" fill="#a6c992"></path>
+
+                            <g class="buildings">
+                                <rect x="20" y="7" width="25" height="13" rx="1.5"></rect>
+                                <path d="M18 8 32.5 1 47 8z"></path>
+                                <rect x="25" y="12" width="4" height="5" rx="1"></rect>
+                                <rect x="33" y="12" width="4" height="5" rx="1"></rect>
+                                <rect x="39" y="11" width="3" height="9" rx="1"></rect>
+                                <text x="32.5" y="25">HOTEL</text>
+
+                                <rect x="62" y="9" width="19" height="11" rx="1.5"></rect>
+                                <path d="M60 10 71.5 4 83 10z"></path>
+                                <rect x="67" y="13" width="4" height="5" rx="1"></rect>
+                                <rect x="74" y="13" width="4" height="5" rx="1"></rect>
+                                <text x="71.5" y="25">SPA</text>
+                            </g>
+
+                            <g class="landscaping">
+                                <circle cx="11" cy="12" r="3.5"></circle>
+                                <circle cx="52" cy="10" r="4"></circle>
+                                <circle cx="90" cy="15" r="4.5"></circle>
+                                <circle cx="13" cy="34" r="4"></circle>
+                                <circle cx="87" cy="33" r="3.5"></circle>
+                            </g>
+
+                            <path class="garden-path" d="M0 31c17 5 25 2 39 5s26 2 61-2"></path>
+                            <rect class="pool" x="43" y="32" width="19" height="13" rx="3"></rect>
+                            <path class="pool-highlight" d="M46 35c4-2 8-2 13 0M47 40c4-2 8-2 12 0"></path>
+                            <text class="area-label" x="52.5" y="48">POOL</text>
+
+                            <path class="coastal-path" d="M0 57c22-3 35 3 52 0s32-3 48 0"></path>
+                            <path class="path-center" d="M0 57c22-3 35 3 52 0s32-3 48 0"></path>
+                            <text class="area-label" x="50" y="54">COASTAL PATH</text>
+
+                            <path d="M0 62c15-3 27 1 40 0s31-4 60-1v15H0z" fill="#f5ddad"></path>
+                            <path d="M0 77c20-2 36 1 52-1s33-2 48 1v23H0z" fill="#69c5d0"></path>
+                            <path class="wave" d="M0 83c10-2 14 2 24 0s15-2 25 0 15 2 25 0 16-2 26 0M0 92c10-2 14 2 24 0s15-2 25 0 15 2 25 0 16-2 26 0"></path>
+                            <text class="ocean-label" x="50" y="99">PALONIA BAY</text>
+
+                            <template for:each={mapExperiences} for:item="experience">
+                                <g
+                                    key={experience.Id}
+                                    class={experience.pinClass}
+                                    transform={experience.transform}
+                                    data-experience-id={experience.Id}
+                                    tabindex="0"
+                                    role="button"
+                                    aria-label={experience.ariaLabel}
+                                    onclick={handlePinClick}
+                                    onkeydown={handlePinKeydown}
+                                >
+                                    <title>{experience.Name} — {experience.Type__c}</title>
+                                    <circle class="pin-shadow" cx="0" cy="0.5" r="2.8"></circle>
+                                    <circle class="pin-ring" cx="0" cy="0" r="3.7"></circle>
+                                    <circle class="pin-body" cx="0" cy="0" r="2.8" fill={experience.color}></circle>
+                                    <text class="pin-icon" x="0" y="1">{experience.icon}</text>
+                                </g>
+                            </template>
+                        </svg>
+                        <template lwc:if={hasNoExperiences}>
+                            <p class="empty-map-message slds-p-around_small">
+                                No experiences with valid map coordinates are available for this resort.
+                            </p>
+                        </template>
+                    </div>
+
+                    <template lwc:if={selectedExperience}>
+                        <section class="detail-panel slds-box slds-theme_default" aria-live="polite">
+                            <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_small">
+                                <h2 class="slds-text-heading_small">{selectedExperience.Name}</h2>
+                                <lightning-button-icon
+                                    icon-name="utility:close"
+                                    alternative-text="Close experience details"
+                                    title="Close"
+                                    onclick={handleCloseDetails}
+                                ></lightning-button-icon>
+                            </div>
+                            <p class="slds-m-bottom_small">
+                                <span class="type-badge" style={selectedExperience.typeStyle}>
+                                    {selectedExperience.Type__c}
+                                </span>
+                            </p>
+                            <dl class="detail-list">
+                                <div>
+                                    <dt>Price</dt>
+                                    <dd>
+                                        <lightning-formatted-number
+                                            value={selectedExperience.Price__c}
+                                            format-style="currency"
+                                        ></lightning-formatted-number>
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>Duration</dt>
+                                    <dd>
+                                        <template lwc:if={selectedExperience.hasDuration}>
+                                            <lightning-formatted-number
+                                                value={selectedExperience.Duration_Hours__c}
+                                                maximum-fraction-digits="2"
+                                            ></lightning-formatted-number>
+                                            hours
+                                        </template>
+                                        <template lwc:else>Not specified</template>
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>Activity level</dt>
+                                    <dd>{selectedExperience.activityLevel}</dd>
+                                </div>
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>{selectedExperience.location}</dd>
+                                </div>
+                            </dl>
+                        </section>
+                    </template>
+                </div>
+
+                <div class="map-legend slds-m-top_small" aria-label="Map legend">
+                    <span class="legend-item"><span class="legend-dot recommended"></span> Matches guest interest</span>
+                    <span class="legend-item"><span class="legend-dot other"></span> Other experience</span>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

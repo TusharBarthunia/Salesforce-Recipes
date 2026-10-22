@@ -335,3 +335,13 @@ The test demonstrates:
 - `TodoCalloutServiceTest` — Apex Test Class
 
 ---
+
+### 17. Palonia Resort Experience Booking — Agentforce Demo
+
+**Added:** 22 Oct 2026
+
+Demonstrates an AI-assisted workflow for building and deploying a Palonia Resort experience-booking demo in a Salesforce DX project. High-level prompts guide an AI coding assistant through creating Salesforce metadata and application components, including custom objects, sample data, a permission set, a check-in Flow, an LWC, a prompt template, and an Agentforce agent.
+
+The example illustrates how an AI assistant can help translate natural-language requirements into Salesforce DX source and deploy the resulting demo to an org.
+
+---

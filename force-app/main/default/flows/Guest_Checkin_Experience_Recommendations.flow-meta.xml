@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>62.0</apiVersion>
-    <description>Fires when a Reservation Status changes to Checked In. Looks up the related Guest, finds Experiences whose Type matches any of the guest three interests, and creates a Task for the running user listing each recommendation with name, price, duration, and location.</description>
+    <actionCalls>
+        <description>Generate a personalized welcome email for the guest.</description>
+        <name>Generate_Welcome_Email</name>
+        <label>Generate Welcome Email</label>
+        <locationX>176</locationX>
+        <locationY>854</locationY>
+        <actionName>Palonia_Welcome_Email</actionName>
+        <actionType>generatePromptResponse</actionType>
+        <connector>
+            <targetReference>Save_Welcome_Email_Draft</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>Input:Guest_Name</name>
+            <value>
+                <elementReference>formGuestDisplayName</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Input:Check_In_Date</name>
+            <value>
+                <elementReference>formCheckInDateText</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Input:Check_Out_Date</name>
+            <value>
+                <elementReference>formCheckOutDateText</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Input:Relevant_Experiences</name>
+            <value>
+                <elementReference>varPromptExperiences</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Palonia_Welcome_Email</nameSegment>
+        <outputParameters>
+            <assignToReference>varWelcomeEmail</assignToReference>
+            <name>promptResponse</name>
+        </outputParameters>
+        <offset>0</offset>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>66.0</apiVersion>
+    <description>Fires when a Reservation Status changes to Checked In. Looks up the related Guest, finds Experiences whose Type matches any of the guest three interests, creates a concierge Task, generates a personalized welcome email, and saves it to the reservation.</description>
     <interviewLabel>Guest_Checkin_Experience_Recommendations {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Guest Check-In Experience Recommendations</label>
     <processMetadataValues>
@@ -67,6 +111,13 @@
             <operator>Add</operator>
             <value>
                 <elementReference>tmplLineItem</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPromptExperiences</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>tmplPromptExperience</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -143,6 +194,18 @@
         <expression>TODAY()</expression>
     </formulas>
 
+    <formulas>
+        <name>formCheckInDateText</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Check_In_Date__c})</expression>
+    </formulas>
+
+    <formulas>
+        <name>formCheckOutDateText</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Check_Out_Date__c})</expression>
+    </formulas>
+
     <!-- ── Loops ──────────────────────────────────────────────────────────────── -->
 
     <loops>
@@ -203,8 +266,33 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputAssignments>
+        <connector>
+            <targetReference>Generate_Welcome_Email</targetReference>
+        </connector>
         <object>Task</object>
     </recordCreates>
+
+    <recordUpdates>
+        <name>Save_Welcome_Email_Draft</name>
+        <label>Save Welcome Email Draft</label>
+        <locationX>176</locationX>
+        <locationY>974</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Welcome_Email_Draft__c</field>
+            <value>
+                <elementReference>varWelcomeEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Reservation__c</object>
+    </recordUpdates>
 
     <!-- ── Record Lookups (grouped) ───────────────────────────────────────────── -->
 
@@ -275,6 +363,7 @@
         <queriedFields>Price__c</queriedFields>
         <queriedFields>Duration_Hours__c</queriedFields>
         <queriedFields>Location__c</queriedFields>
+        <queriedFields>Description__c</queriedFields>
         <sortField>Name</sortField>
         <sortOrder>Asc</sortOrder>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -290,6 +379,15 @@
 </text>
     </textTemplates>
 
+    <textTemplates>
+        <name>tmplPromptExperience</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Experience: {!Loop_Experiences.Name}
+Description: {!Loop_Experiences.Description__c}
+
+</text>
+    </textTemplates>
+
     <!-- One bullet line per loop iteration; references the current Experience record -->
     <textTemplates>
         <name>tmplLineItem</name>
@@ -302,6 +400,22 @@
 
     <variables>
         <name>varTaskBody</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+
+    <variables>
+        <name>varPromptExperiences</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+
+    <variables>
+        <name>varWelcomeEmail</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

@@ -1,0 +1,234 @@
+.map-intro {
+    color: #444;
+    font-size: 0.875rem;
+}
+
+.map-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 19rem);
+    gap: 1rem;
+    align-items: start;
+}
+
+.map-frame {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #d8dde6;
+    border-radius: 0.5rem;
+    background: #dcebd1;
+}
+
+.empty-map-message {
+    background: #fff;
+    color: #444;
+    font-size: 0.875rem;
+}
+
+.resort-map {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: "Salesforce Sans", Arial, sans-serif;
+}
+
+.buildings rect {
+    fill: #f7f3e9;
+    stroke: #9a8064;
+    stroke-width: 0.55;
+}
+
+.buildings path {
+    fill: #9b7056;
+}
+
+.buildings text,
+.area-label,
+.ocean-label {
+    fill: #344b3a;
+    font-size: 2.1px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-anchor: middle;
+}
+
+.landscaping {
+    fill: #4f8958;
+    stroke: #3b7047;
+    stroke-width: 0.45;
+}
+
+.garden-path {
+    fill: none;
+    stroke: #e9d6ad;
+    stroke-width: 2;
+}
+
+.pool {
+    fill: #48b9ce;
+    stroke: #f5fbfb;
+    stroke-width: 1;
+}
+
+.pool-highlight {
+    fill: none;
+    stroke: #d8f4f5;
+    stroke-linecap: round;
+    stroke-width: 0.7;
+}
+
+.area-label {
+    fill: #415864;
+    font-size: 1.7px;
+}
+
+.coastal-path {
+    fill: none;
+    stroke: #d4b780;
+    stroke-linecap: round;
+    stroke-width: 3;
+}
+
+.path-center {
+    fill: none;
+    stroke: #fff7e8;
+    stroke-dasharray: 1.5 1.5;
+    stroke-width: 0.35;
+}
+
+.wave {
+    fill: none;
+    stroke: #b3e5e8;
+    stroke-linecap: round;
+    stroke-width: 0.55;
+}
+
+.ocean-label {
+    fill: #fff;
+    font-size: 1.8px;
+    letter-spacing: 0.4px;
+}
+
+.experience-pin {
+    cursor: pointer;
+    transition: opacity 120ms ease, filter 120ms ease;
+}
+
+.experience-pin.dimmed {
+    opacity: 0.58;
+}
+
+.experience-pin:hover,
+.experience-pin:focus,
+.experience-pin.recommended {
+    opacity: 1;
+}
+
+.experience-pin:focus {
+    outline: none;
+    filter: drop-shadow(0 0 1.5px #16325c);
+}
+
+.pin-shadow {
+    fill: #17313b;
+    opacity: 0.2;
+}
+
+.pin-ring {
+    fill: none;
+    opacity: 0;
+    stroke: #f7bd2b;
+    stroke-width: 1.15;
+}
+
+.experience-pin.recommended .pin-ring {
+    opacity: 1;
+}
+
+.pin-body {
+    stroke: #fff;
+    stroke-width: 0.65;
+}
+
+.pin-icon {
+    dominant-baseline: middle;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+    font-size: 3.1px;
+    text-anchor: middle;
+}
+
+.detail-panel {
+    border-left: 3px solid #168c9a;
+    min-width: 0;
+}
+
+.detail-panel h2 {
+    overflow-wrap: anywhere;
+}
+
+.type-badge {
+    display: inline-block;
+    border-radius: 1rem;
+    background: var(--type-color);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
+}
+
+.detail-list {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.detail-list dt {
+    color: #5c5c5c;
+    font-size: 0.75rem;
+}
+
+.detail-list dd {
+    color: #181818;
+    overflow-wrap: anywhere;
+}
+
+.map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: #444;
+    font-size: 0.75rem;
+}
+
+.legend-item {
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+}
+
+.legend-dot.recommended {
+    background: #168c9a;
+    border: 2px solid #f7bd2b;
+}
+
+.legend-dot.other {
+    background: #52616b;
+    opacity: 0.58;
+}
+
+@media (max-width: 48rem) {
+    .map-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .experience-pin {
+        transition: none;
+    }
+}
