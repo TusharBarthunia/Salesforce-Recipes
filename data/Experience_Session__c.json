@@ -1,0 +1,116 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef1" },
+      "Experience__c": "@ExperienceRef1",
+      "Date__c": "2026-10-25",
+      "Start_Time__c": "07:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef2" },
+      "Experience__c": "@ExperienceRef1",
+      "Date__c": "2026-11-08",
+      "Start_Time__c": "07:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef3" },
+      "Experience__c": "@ExperienceRef2",
+      "Date__c": "2026-10-26",
+      "Start_Time__c": "08:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef4" },
+      "Experience__c": "@ExperienceRef2",
+      "Date__c": "2026-11-09",
+      "Start_Time__c": "08:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef5" },
+      "Experience__c": "@ExperienceRef3",
+      "Date__c": "2026-10-24",
+      "Start_Time__c": "09:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef6" },
+      "Experience__c": "@ExperienceRef3",
+      "Date__c": "2026-11-07",
+      "Start_Time__c": "09:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef7" },
+      "Experience__c": "@ExperienceRef4",
+      "Date__c": "2026-10-23",
+      "Start_Time__c": "06:30:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef8" },
+      "Experience__c": "@ExperienceRef4",
+      "Date__c": "2026-11-06",
+      "Start_Time__c": "06:30:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef9" },
+      "Experience__c": "@ExperienceRef5",
+      "Date__c": "2026-10-27",
+      "Start_Time__c": "17:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef10" },
+      "Experience__c": "@ExperienceRef5",
+      "Date__c": "2026-11-10",
+      "Start_Time__c": "17:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef11" },
+      "Experience__c": "@ExperienceRef6",
+      "Date__c": "2026-10-28",
+      "Start_Time__c": "08:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef12" },
+      "Experience__c": "@ExperienceRef6",
+      "Date__c": "2026-11-11",
+      "Start_Time__c": "08:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef13" },
+      "Experience__c": "@ExperienceRef7",
+      "Date__c": "2026-10-29",
+      "Start_Time__c": "10:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef14" },
+      "Experience__c": "@ExperienceRef7",
+      "Date__c": "2026-11-12",
+      "Start_Time__c": "10:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef15" },
+      "Experience__c": "@ExperienceRef8",
+      "Date__c": "2026-10-23",
+      "Start_Time__c": "06:00:00.000Z",
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Session__c", "referenceId": "SessionRef16" },
+      "Experience__c": "@ExperienceRef8",
+      "Date__c": "2026-11-05",
+      "Start_Time__c": "06:00:00.000Z",
+      "Is_Canceled__c": false
+    }
+  ]
+}

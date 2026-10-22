@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Reservation__c", "referenceId": "ReservationRef1" },
+      "Guest__c": "@GuestRef1",
+      "Status__c": "Checked In",
+      "Check_In_Date__c": "2026-10-19",
+      "Check_Out_Date__c": "2026-10-28",
+      "Room_Number__c": "305A",
+      "Welcome_Email_Draft__c": "Dear Bella, welcome back to Palonia Resort! Your Gold membership ensures exceptional service throughout your stay in Room 305A. Our concierge team is ready to assist with experience bookings and any special requests. We hope you enjoy your coral reef snorkeling tour and surf lesson this week!"
+    },
+    {
+      "attributes": { "type": "Reservation__c", "referenceId": "ReservationRef2" },
+      "Guest__c": "@GuestRef2",
+      "Status__c": "Checked In",
+      "Check_In_Date__c": "2026-10-20",
+      "Check_Out_Date__c": "2026-10-27",
+      "Room_Number__c": "201B",
+      "Welcome_Email_Draft__c": "Dear Jamie, welcome to Palonia Resort! As a Platinum member you enjoy priority boarding for all experiences, complimentary champagne on your Sunset Sail, and 24-hour butler service in Room 201B. Your whale watching voyage is confirmed for tomorrow morning — we look forward to a magical stay."
+    },
+    {
+      "attributes": { "type": "Reservation__c", "referenceId": "ReservationRef3" },
+      "Guest__c": "@GuestRef3",
+      "Status__c": "Booked",
+      "Check_In_Date__c": "2026-10-30",
+      "Check_Out_Date__c": "2026-11-05",
+      "Room_Number__c": "118C",
+      "Welcome_Email_Draft__c": "Dear Priya, we are delighted to welcome you to Palonia Resort on October 30th! Room 118C has been prepared with your Silver member amenities. We have pre-selected the Sunrise Paddleboard Tour, Coastal Eco Walk, and Ocean Breeze Spa Retreat based on your interests. See you soon!"
+    },
+    {
+      "attributes": { "type": "Reservation__c", "referenceId": "ReservationRef4" },
+      "Guest__c": "@GuestRef4",
+      "Status__c": "Booked",
+      "Check_In_Date__c": "2026-11-03",
+      "Check_Out_Date__c": "2026-11-10",
+      "Room_Number__c": "412A",
+      "Welcome_Email_Draft__c": "Dear Jake, we look forward to your arrival on November 3rd at Palonia Resort! Room 412A is ready for you. Our surf instructors are excited to get you on the waves and we have great family-friendly activities lined up for your stay."
+    },
+    {
+      "attributes": { "type": "Reservation__c", "referenceId": "ReservationRef5" },
+      "Guest__c": "@GuestRef5",
+      "Status__c": "Booked",
+      "Check_In_Date__c": "2026-11-01",
+      "Check_Out_Date__c": "2026-11-08",
+      "Room_Number__c": "224B",
+      "Welcome_Email_Draft__c": "Dear Amara Osei, welcome back to Palonia Resort! Your Gold membership perks await you in Room 224B from November 1st. We have reserved a space in the Ocean Breeze Spa Retreat and a spot on the Sunset Sail especially for you. We can't wait to see you!"
+    }
+  ]
+}

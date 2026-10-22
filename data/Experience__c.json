@@ -1,0 +1,108 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Experience__c", "referenceId": "ExperienceRef1" },
+      "Name": "Coral Reef Snorkeling Tour",
+      "Type__c": "Snorkeling",
+      "Activity_Level__c": "High",
+      "Capacity__c": 12,
+      "Duration_Hours__c": 3.0,
+      "Price__c": 95.00,
+      "Location__c": "Coral Cove Reef",
+      "Map_X__c": 70,
+      "Map_Y__c": 93,
+      "Description__c": "Explore vibrant coral gardens teeming with tropical fish just off Palonia's coastline."
+    },
+    {
+      "attributes": { "type": "Experience__c", "referenceId": "ExperienceRef2" },
+      "Name": "Whale Watching Voyage",
+      "Type__c": "Whale Watching",
+      "Activity_Level__c": "Low",
+      "Capacity__c": 20,
+      "Duration_Hours__c": 4.0,
+      "Price__c": 120.00,
+      "Location__c": "Palonia Bay Open Ocean",
+      "Map_X__c": 20,
+      "Map_Y__c": 97,
+      "Description__c": "Sail into open waters to spot humpback and blue whales in their natural habitat."
+    },
+    {
+      "attributes": { "type": "Experience__c", "referenceId": "ExperienceRef3" },
+      "Name": "Beginner Surf Lesson",
+      "Type__c": "Surfing",
+      "Activity_Level__c": "High",
+      "Capacity__c": 8,
+      "Duration_Hours__c": 2.0,
+      "Price__c": 75.00,
+      "Location__c": "North Break Beach",
+      "Map_X__c": 55,
+      "Map_Y__c": 82,
+      "Description__c": "Learn to ride the waves with our certified surf instructors on the resort's gentle north shore break."
+    },
+    {
+      "attributes": { "type": "Experience__c", "referenceId": "ExperienceRef4" },
+      "Name": "Sunrise Paddleboard Tour",
+      "Type__c": "Paddleboarding",
+      "Activity_Level__c": "Medium",
+      "Capacity__c": 10,
+      "Duration_Hours__c": 1.5,
+      "Price__c": 60.00,
+      "Location__c": "Lagoon Cove",
+      "Map_X__c": 40,
+      "Map_Y__c": 78,
+      "Description__c": "Glide across Palonia's calm lagoon and watch the sunrise paint the sky from the water."
+    },
+    {
+      "attributes": { "type": "Experience__c", "referenceId": "ExperienceRef5" },
+      "Name": "Sunset Sail",
+      "Type__c": "Sunset Sail",
+      "Activity_Level__c": "Low",
+      "Capacity__c": 16,
+      "Duration_Hours__c": 2.0,
+      "Price__c": 110.00,
+      "Location__c": "Palonia Marina",
+      "Map_X__c": 25,
+      "Map_Y__c": 88,
+      "Description__c": "Cast off at golden hour for a leisurely sail, live music, and champagne on the horizon."
+    },
+    {
+      "attributes": { "type": "Experience__c", "referenceId": "ExperienceRef6" },
+      "Name": "Coastal Eco Walk",
+      "Type__c": "Eco Tour",
+      "Activity_Level__c": "Medium",
+      "Capacity__c": 14,
+      "Duration_Hours__c": 2.5,
+      "Price__c": 45.00,
+      "Location__c": "Coastal Trail Path",
+      "Map_X__c": 65,
+      "Map_Y__c": 60,
+      "Description__c": "Discover hidden tide pools, mangroves, and coastal wildlife on a guided nature walk."
+    },
+    {
+      "attributes": { "type": "Experience__c", "referenceId": "ExperienceRef7" },
+      "Name": "Ocean Breeze Spa Retreat",
+      "Type__c": "Spa & Wellness",
+      "Activity_Level__c": "Low",
+      "Capacity__c": 6,
+      "Duration_Hours__c": 3.0,
+      "Price__c": 150.00,
+      "Location__c": "Palonia Wellness Center",
+      "Map_X__c": 45,
+      "Map_Y__c": 12,
+      "Description__c": "Surrender to total relaxation with deep-tissue massage and aromatherapy ocean-view treatments."
+    },
+    {
+      "attributes": { "type": "Experience__c", "referenceId": "ExperienceRef8" },
+      "Name": "Beach Yoga at Sunrise",
+      "Type__c": "Fitness",
+      "Activity_Level__c": "Medium",
+      "Capacity__c": 15,
+      "Duration_Hours__c": 1.0,
+      "Price__c": 35.00,
+      "Location__c": "Palm Beach Pavilion",
+      "Map_X__c": 60,
+      "Map_Y__c": 76,
+      "Description__c": "Begin your morning grounded — gentle sun salutations on soft sand as the sun crests the horizon."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Guest__c", "referenceId": "GuestRef1" },
+      "Full_Name__c": "Sofia Reyes",
+      "Preferred_Name__c": "Bella",
+      "Email__c": "sofia.reyes@paloniaresort.example.com",
+      "Membership_Level__c": "Gold",
+      "Interest_1__c": "Snorkeling",
+      "Interest_2__c": "Surfing",
+      "Interest_3__c": "Fitness"
+    },
+    {
+      "attributes": { "type": "Guest__c", "referenceId": "GuestRef2" },
+      "Full_Name__c": "Marcus Chen",
+      "Preferred_Name__c": "Jamie",
+      "Email__c": "marcus.chen@paloniaresort.example.com",
+      "Membership_Level__c": "Platinum",
+      "Interest_1__c": "Whale Watching",
+      "Interest_2__c": "Sunset Sail",
+      "Interest_3__c": "Dining"
+    },
+    {
+      "attributes": { "type": "Guest__c", "referenceId": "GuestRef3" },
+      "Full_Name__c": "Priya Nair",
+      "Preferred_Name__c": "Priya",
+      "Email__c": "priya.nair@paloniaresort.example.com",
+      "Membership_Level__c": "Silver",
+      "Interest_1__c": "Paddleboarding",
+      "Interest_2__c": "Eco Tour",
+      "Interest_3__c": "Spa & Wellness"
+    },
+    {
+      "attributes": { "type": "Guest__c", "referenceId": "GuestRef4" },
+      "Full_Name__c": "Jake Turner",
+      "Preferred_Name__c": "Jake",
+      "Email__c": "jake.turner@paloniaresort.example.com",
+      "Membership_Level__c": "Bronze",
+      "Interest_1__c": "Surfing",
+      "Interest_2__c": "Fitness",
+      "Interest_3__c": "Family Activities"
+    },
+    {
+      "attributes": { "type": "Guest__c", "referenceId": "GuestRef5" },
+      "Full_Name__c": "Amara Diallo",
+      "Preferred_Name__c": "Amara",
+      "Email__c": "amara.diallo@paloniaresort.example.com",
+      "Membership_Level__c": "Gold",
+      "Interest_1__c": "Spa & Wellness",
+      "Interest_2__c": "Dining",
+      "Interest_3__c": "Snorkeling"
+    }
+  ]
+}

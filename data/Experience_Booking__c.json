@@ -1,0 +1,32 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Experience_Booking__c", "referenceId": "BookingRef1" },
+      "Experience_Session__c": "@SessionRef1",
+      "Guest__c": "@GuestRef1",
+      "Number_of_Guests__c": 2,
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Booking__c", "referenceId": "BookingRef2" },
+      "Experience_Session__c": "@SessionRef5",
+      "Guest__c": "@GuestRef1",
+      "Number_of_Guests__c": 1,
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Booking__c", "referenceId": "BookingRef3" },
+      "Experience_Session__c": "@SessionRef3",
+      "Guest__c": "@GuestRef2",
+      "Number_of_Guests__c": 2,
+      "Is_Canceled__c": false
+    },
+    {
+      "attributes": { "type": "Experience_Booking__c", "referenceId": "BookingRef4" },
+      "Experience_Session__c": "@SessionRef9",
+      "Guest__c": "@GuestRef2",
+      "Number_of_Guests__c": 2,
+      "Is_Canceled__c": false
+    }
+  ]
+}
