@@ -37,3 +37,11 @@ sfca_results.json
 
 # Local environment variables
 .env
+
+# JWT Private Keys
+*.key
+*.pem
+
+# Environment secrets
+.env
+.env.*

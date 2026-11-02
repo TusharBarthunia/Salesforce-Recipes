@@ -345,3 +345,44 @@ Demonstrates an AI-assisted workflow for building and deploying a Palonia Resort
 The example illustrates how an AI assistant can help translate natural-language requirements into Salesforce DX source and deploy the resulting demo to an org.
 
 ---
+### 18. JWT Bearer Flow — OAuth 2.0 Server-to-Server Integration
+
+**Added:** 2 Nov 2026
+
+Demonstrates how to implement the **OAuth 2.0 JWT Bearer Flow** for server-to-server authentication with Salesforce using an External Client App (ECA).
+
+The hands-on demonstrates:
+
+- Creating a dedicated Salesforce Integration User
+- Generating an RSA private key and self-signed public certificate using OpenSSL
+- Configuring an External Client App (ECA) with JWT Bearer Flow
+- Uploading the public certificate to the External Client App
+- Configuring OAuth scopes and Admin Approved pre-authorization policies
+- Generating a signed JWT assertion using Node.js and the `jsonwebtoken` library
+- Exchanging the JWT assertion for a Salesforce access token using Postman
+- Authenticating Salesforce REST API requests using the generated access token
+
+**Authentication Flow:**
+
+1. Node.js reads the RSA private key and generates a signed JWT.
+2. The JWT is sent to Salesforce's OAuth token endpoint.
+3. Salesforce validates the JWT signature using the uploaded public certificate.
+4. Salesforce issues an access token for the authorized Integration User.
+5. The access token is used to access Salesforce REST APIs.
+
+**Technologies Used:**
+
+- Salesforce External Client App (ECA)
+- OAuth 2.0 JWT Bearer Flow
+- OpenSSL
+- Node.js
+- `jsonwebtoken`
+- Postman
+- Salesforce REST API
+
+**Related Components:**
+
+- `JWT Hands-on` — External Client App
+- `server.crt` — Public Certificate
+- `generate-jwt.js` — Node.js JWT Generation Script
+- `Postman` — OAuth Token Exchange and REST API Testing
